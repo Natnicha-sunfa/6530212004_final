@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PlantDB</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h4 {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .w3-sidebar {
+            background-color: #34495e;
+        }
+
+        .w3-bar-item {
+            color: white !important;
+        }
+
+        .w3-bar-item:hover {
+            background-color: #2c3e50;
+        }
+
+        .w3-container {
+            padding: 40px;
+        }
+
+        .w3-main {
+            margin-left: 320px;
+            padding: 20px;
+        }
+
+        .w3-button {
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+
+        .w3-grey {
+            background-color: #ecf0f1 !important;
+        }
+
+        .w3-dark-grey {
+            background-color: #95a5a6 !important;
+        }
+
+        .w3-teal {
+            background-color: #1abc9c !important;
+        }
+
+        .w3-button:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .w3-section input {
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 12px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .w3-container form {
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background-color: #34495e;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #1abc9c;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .w3-row-padding {
+            margin: 0;
+        }
+
+        /* Improved Layout and Spacing */
+        .w3-section {
+            margin-bottom: 20px;
+        }
+
+        .chart-container {
+            margin-top: 20px;
+        }
+
+        .w3-bar-item i {
+            margin-right: 10px;
+        }
+
+        .w3-padding-large {
+            padding: 40px;
+        }
+
+        .w3-main h4, .w3-main p {
+            margin-bottom: 20px;
+        }
+
+        .w3-container .form-label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .w3-container form input[type="text"] {
+            font-size: 16px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-collapse w3-animate-left" style="width:300px;" id="mySidebar">
+    <div class="w3-container w3-padding-16">
+        <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+            <i class="fa fa-remove"></i>
+        </a>
+    </div>
+    <div class="w3-bar-block">
+        <a href="HomePage.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-home fa-fw w3-margin-right"></i>HomePage</a>
+        <a href="Map.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-map-o fa-fw w3-margin-right"></i>Map</a>
+        <a href="tree_information.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-info-circle fa-fw w3-margin-right"></i>tree information</a>
+        <a href="Q&A.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-question-circle fa-fw w3-margin-right"></i>Q&A</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user-circle-o fa-fw w3-margin-right"></i>Contact Us</a>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main" style="margin-left:320px">
+    <header>
+        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+        <div class="w3-container">
+            <h1><b>PlantDB</b></h1>
+        </div>
+    </header>
+
+    <div class="w3-container w3-padding-large">
+        <h4><b>About Us</b></h4>
+        <p class="about-text">
+            "ค้นพบโลกของต้นไม้และธรรมชาติ"  
+            <br><br>
+            เว็บไซต์ที่ให้ข้อมูลเกี่ยวกับต้นไม้ที่สำคัญในประเทศไทยและทั่วโลก รวมถึงการดูแลรักษาและปลูกต้นไม้ พร้อมทั้งข้อมูลพันธุ์ไม้ต่าง ๆ ที่จะช่วยให้คุณเชื่อมต่อกับธรรมชาติและเพิ่มความรู้เกี่ยวกับสิ่งแวดล้อม ไม่ว่าจะเป็นต้นไม้ที่มีความสำคัญทางเศรษฐกิจ, สิ่งแวดล้อม หรือวัฒนธรรม คุณจะได้เรียนรู้วิธีการปลูกต้นไม้ในพื้นที่ต่าง ๆ ที่เหมาะสม รวมถึงเคล็ดลับในการดูแลรักษาต้นไม้ให้เติบโตแข็งแรง 
+            <br><br>
+            นอกจากนี้ยังมีแผนที่เชิงโต้ตอบที่ช่วยให้คุณสำรวจและค้นหาต้นไม้ในพื้นที่ใกล้เคียงของคุณได้ง่ายดาย เรามีบทความและข้อมูลจากผู้เชี่ยวชาญที่พร้อมให้คำแนะนำในการเลือกพันธุ์ไม้ที่เหมาะสมกับสภาพแวดล้อมต่าง ๆ ทั้งในเมืองและชนบท
+        </p>
+        <hr>
+    </div>
+    
+    <style>
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            font-family: 'Raleway', sans-serif;
+            text-align: justify;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
+    
+        .about-text br {
+            margin-bottom: 10px;
+        }
+    
+        h4 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+    
+        hr {
+            border-top: 2px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+    
+        
+        <h4><b>Annual forest area</b></h4>
+        <div class="chart-container">
+            <p>2551</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:28.3%">28.3 %</div>
+            </div>
+            <p>2556</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:20.19%">20.19%</div>
+            </div>
+            <p>2557</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:20.30%">20.30%</div>
+            </div>
+            <p>2558</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:20.24%">20.24%</div>
+            </div>
+            <p>2559</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:20.34%">20.34%</div>
+            </div>
+            <p>2560</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:20.38%">20.38%</div>
+            </div>
+            <p>2561</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:20.63%">20.63%</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Contact Form -->
+        <div class="w3-container w3-padding-large w3-grey">
+            <h4 id="contact"><b>Contact Us</b></h4>
+            <div class="w3-row-padding w3-center w3-padding-24">
+                <div class="w3-third w3-dark-grey">
+                    <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+                    <p>s6530212004@phuket.psu.ac.th</p>
+                </div>
+                <div class="w3-third w3-teal">
+                    <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+                    <p>Phuket, Thailand</p>
+                </div>
+                <div class="w3-third w3-dark-grey">
+                    <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+                    <p>061-537-3063</p>
+                </div>
+            </div>
+            <hr class="w3-opacity">
+            <form action="/action_page.php" target="_blank">
+                <div class="w3-section">
+                    <label class="form-label">Name</label>
+                    <input class="w3-input w3-border" type="text" name="Name" required>
+                </div>
+                <div class="w3-section">
+                    <label class="form-label">Email</label>
+                    <input class="w3-input w3-border" type="text" name="Email" required>
+                </div>
+                <div class="w3-section">
+                    <label class="form-label">Message</label>
+                    <input class="w3-input w3-border" type="text" name="Message" required>
+                </div>
+                <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a></p>
+</footer>
+
+<!-- Script for Sidebar -->
+<script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

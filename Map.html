@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนที่ต้นไม้</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        h1 {
+            color: #27ae60;
+            font-size: 2.5rem;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .map-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        iframe:hover {
+            transform: scale(1.05);
+        }
+
+        .description-container {
+            background-color: #ecf8f3;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #34495e;
+        }
+
+        .faq-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-form:hover {
+            background-color: #f9fafb;
+        }
+
+        .faq-form input,
+        .faq-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .faq-form input:focus,
+        .faq-form textarea:focus {
+            border-color: #27ae60;
+            outline: none;
+            background-color: #f0f9f4;
+        }
+
+        .faq-form button {
+            background-color: #27ae60;
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-form button:hover {
+            background-color: #2ecc71;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 1rem;
+            color: #95a5a6;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .button-container {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .button-container a {
+            background-color: #3498db;
+            color: white;
+            padding: 14px 26px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-container a:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            iframe {
+                height: 300px;
+            }
+
+            .description-container {
+                font-size: 1rem;
+            }
+
+            .faq-form input,
+            .faq-form textarea {
+                padding: 12px;
+            }
+
+            .faq-form button {
+                font-size: 1rem;
+                padding: 12px 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>แผนที่ต้นไม้</h1>
+
+        <!-- Map Section -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1PyBuU5-DCPZ82knagCqWuWBGFTBqgSI" frameborder="0"></iframe>
+        </div>
+
+        <!-- Description Section -->
+        <div class="description-container">
+            <h3>คำอธิบายแผนที่</h3>
+            <p>
+                แผนที่นี้แสดงตำแหน่งและเส้นทางของต้นไม้สำคัญในพื้นที่ต่าง ๆ โดยออกแบบเพื่อให้ผู้ใช้สามารถสำรวจและเรียนรู้เกี่ยวกับพันธุ์ไม้ที่มีความหลากหลาย และสถานที่ที่มีต้นไม้แต่ละประเภท รวมถึงการรักษาสิ่งแวดล้อมและการฟื้นฟูธรรมชาติ แผนที่นี้จะช่วยให้ผู้ใช้เห็นการกระจายพันธุ์ของต้นไม้ในแต่ละพื้นที่ และสามารถเข้าถึงข้อมูลของต้นไม้ที่น่าสนใจในแต่ละตำแหน่งได้อย่างง่ายดาย
+            </p>
+        </div>
+
+        <!-- FAQ Form Section -->
+        <div class="faq-form">
+            <h3>ถามคำถามของคุณ</h3>
+            <form action="#" method="post">
+                <input type="text" placeholder="ชื่อของคุณ" required>
+                <textarea rows="4" placeholder="คำถามของคุณ" required></textarea>
+                <button type="submit">ส่งคำถาม</button>
+            </form>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="button-container">
+            <a href="#FAQ">ดูคำถามที่ถามบ่อย</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 แผนที่ต้นไม้ | <a href="#">นโยบายความเป็นส่วนตัว</a></p>
+    </div>
+</body>
+</html>

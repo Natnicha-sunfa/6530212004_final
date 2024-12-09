@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ถามคำถาม</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f8fb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .qa-box {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 90%;
+            max-width: 650px;
+            margin: 15px;
+            position: relative;
+            transition: all 0.3s ease;
+            background: linear-gradient(145deg, #f7f9fc, #e1e9f2);
+        }
+
+        .qa-box:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .qa-box h2 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .qa-box input, .qa-box textarea {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            width: 100%;
+            outline: none;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+            background-color: #f9f9f9;
+        }
+
+        .qa-box input:focus, .qa-box textarea:focus {
+            border-color: #4CAF50;
+            background-color: #ecf9f3;
+        }
+
+        .qa-box textarea {
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 15px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .qa-box input::placeholder, .qa-box textarea::placeholder {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="qa-box">
+    <h2>ถามคำถามของคุณ</h2>
+    <input type="text" placeholder="ใส่คำถามสั้นๆ ที่นี่..." required>
+    <textarea placeholder="ถ้าคำถามยาวสามารถใส่ที่นี่..." required></textarea>
+    <button class="btn-submit">ส่งคำถาม</button>
+</div>
+
+</body>
+</html>
